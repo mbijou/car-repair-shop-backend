@@ -28,7 +28,7 @@ SECRET_KEY = '+fdpo62144)9g3)*qz9$131n2e^1u!o$pa9a8^lnid+#**ti5x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(',')
 
 CORS_ORIGIN_ALLOW_ALL = True
 
