@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # https://youtrack.jetbrains.com/issue/PY-43897 -> Fehler beim generieren vom Django Projekt von PyCharm
 
@@ -136,3 +137,7 @@ REST_FRAMEWORK = {
     'DEFAULT_METADATA_CLASS': 'rest_framework.metadata.SimpleMetadata'
 }
 
+
+# HEROKU SETTINGS
+
+django_heroku.settings(locals())
