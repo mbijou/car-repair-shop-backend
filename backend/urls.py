@@ -21,6 +21,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     # path('admin2/', admin.site.urls),
+    path('api/', include('company.urls')),
     path('admin/api/', include('company.urls')),
-    re_path(r'^admin/$', TemplateView.as_view(template_name="angular.html")),
+    re_path(r'^admin.*$', TemplateView.as_view(template_name="angular.html")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
