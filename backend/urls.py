@@ -20,7 +20,7 @@ from django.conf import settings
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('company.urls')),
-    re_path(r'^$', TemplateView.as_view(template_name="angular.html")),
+    # path('admin2/', admin.site.urls),
+    path('admin/api/', include('company.urls')),
+    re_path(r'^admin/$', TemplateView.as_view(template_name="angular.html")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
